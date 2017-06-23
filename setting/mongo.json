@@ -1,0 +1,22 @@
+{
+	"url" : "mongodb://192.168.16.242:27017/db_edu",
+	"options" : {
+		"db" : {
+			"numberOfRetries" : 5,
+			"retryMiliSeconds": 1000,
+			"w":1,
+			"wtimeout" : 1000
+		},
+		"server" : {
+			"auto_reconnect": true,
+			"socketOptions":{
+				"keepAlive": 5,
+				"noDelay": true,
+				"connectTimeoutMS": 3000,
+				"socketTimeoutMS": 3000
+			},
+			"poolSize": 1
+		}
+	},
+	"dbname" : "db_edu"
+}

@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" lang="en"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en" dir="ltr" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:product="http://ogp.me/ns/product#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# "><!--<![endif]-->
+<head>
+
+	<meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta name="title" content="Desk.com | Customer Service and Helpdesk Ticket Software" />
+<!--
+	<link rel="canonical" href="https://www.desk.com/" />
+	<link rel="shortlink" href="https://www.desk.com/" />
+-->
+
+<link rel="shortcut icon" href="/core/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="shortlink" href="/node/1" />
+
+	<title><%=title %></title>
+
+	<link rel="stylesheet" href="/assets/css/css_1.css?oqvwy5" media="all" />
+	<link rel="stylesheet" href="/assets/css/css_2.css?oqvwy5" media="all" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="//webassets.desk.com/resources/images/icons/favicon.ico">
+	<link rel="apple-touch-icon" href="//webassets.desk.com/resources/images/icons/favicon-apple-57x57.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="//webassets.desk.com/resources/images/icons/favicon-apple-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="//webassets.desk.com/resources/images/icons/favicon-apple-114x114.png">
+	<link rel="apple-touch-icon-precomposed" href="//webassets.desk.com/resources/images/icons/favicon-apple-57x57.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="//webassets.desk.com/resources/images/icons/favicon-apple-72x72.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="//webassets.desk.com/resources/images/icons/favicon-apple-114x114.png">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+	
+<!--[if lte IE 8]>
+<script src="/assets/js//js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+
+	<script src="https://use.typekit.net/bsh2tmy.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+	<script type="text/javascript" src="/assets/js/jquery-1.11.2.min.js?v=9.2" ></script>
+
+</head>
+<body class="path-frontpage page-node-type-page page container-lg page__home page--home">
+
+<!-- ========================================
+
+	Header
+
+========================================= -->
+
+<header role="banner">
+
+	
+			
+		<div
+			data-phase="one"
+			class="navbar navbar-default navbar-desk navbar-desk-desktop navbar-fixed-top navbar-no-hero "
+		>
+			<div class="container" id="primary-nav">
+				
+				<nav role="navigation" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav" style="width: 100%">
+						<li class="link-pricing">
+							<a href="#">
+								<span class="link-title">
+									首页
+								</span>
+							</a>
+						</li>
+						<li class="link-pricing">
+							<a href="/teachers">
+								<span class="link-title">
+									北美师资
+								</span>
+							</a>
+						</li>
+						<li class="link-pricing">
+							<a href="#">
+								<span class="link-title">
+									课程介绍
+								</span>
+							</a>
+						</li>
+						<li class="link-pricing">
+							<a href="#">
+								<span class="link-title">
+									游学服务
+								</span>
+							</a>
+						</li>
+						<li class="link-pricing">
+							<a href="/about">
+								<span class="link-title">
+									关于加舟
+								</span>
+							</a>
+						</li>
+						<li class="link-contact dropdown last" style="float:right;">
+							<a href="#">
+								<span class="icon-wrap">
+									<span class="icon icon-phone"></span>
+								</span>
+							</a>
+							<ul class='dropdown-menu list-unstyled dropdown-simple'>
+								<li>
+									<a href="tel:1-877-226-9212" class="link--phone-number">
+										<span class='text'>1-877-226-9212</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="link-free-trial" style="float:right;">
+							<a href="#" onclick="_gaq.push(['assistly._trackEvent', 'Main Nav', 'Free Trial', 'Free Trial']);">
+								<span class="link-title">
+									登陆注册
+								</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	
+	
+			
+<div class="jumbotron jumbotron-homepage jumbotron--homepage__v2 woodgrain">
+	<div class="container">
+				<h1 class="jumbotron__heading">
+							唤醒孩子的无限潜能<br/>让梦想从这里启航
+					</h1>
+		<p class="lead jumbotron__subheading">
+			Which we learn with pleasure we never forget.	</p>
+				<p>
+			<a
+				href="/appointment"
+				class="btn btn-lg btn-success btn-round btn-no-border btn-uppercase"
+			>
+				北美本土外教免费试听
+			</a>
+		</p>
+					</div>
+			<div class="ipad-with-video hidden-xs">
+			<a
+				href="#"
+				data-width="100%"
+				data-toggle="lightbox"
+				class="video--wrapper fresco"
+				data-fresco-options="rel: 0"
+			>
+				<span class="ipad-with-video__video-link">
+					<span class="ipad-with-video--text">
+						Watch overview video
+					</span>
+				</span>
+				<video
+					width="598"
+					height="290"
+					controls="false"
+					autoplay="autoplay"
+					loop="true"
+					poster="assets/img/jumbotron/home/desk-overview-video-thumb.png"
+				>
+					<source src="https://webassets.desk.com/assets/videos/desk-overview-loop.mp4" type="video/mp4">
+					Sorry, this video is not supported.
+				</video>
+			</a>
+		</div>
+						<div class="jumbotron-fade-top"></div>
+		<div class="jumbotron-fade-bottom"></div>
+	</div>	
+	
+		
+</header>
+
+	
+
+
+	<main
+		role="main"
+		class=""
+	>
+					  <div>
+    <div class="views-element-container" id="block-alert-listing">
+  
+    
+      <div><div class="js-view-dom-id-9d4a30e05fe0b21e21e2ac29c7903f6f2d6be4ea300551b0ff950e528af542f0">
+  
+  
+  
+
+  
+  
+  
+
+  <div class="item-list">
+  
+  <ul>
+
+          <li><div class="section section-news section-grey text-center b-alert">
+	<div class="container">
+					
+			<p>
+				<span class="article-excerpt b-alert__excerpt">
+					why choose jiazhou
+				</span>
+				
+			</p>
+	</div>
+</div></li>
+    
+  </ul>
+
+</div>
+  
+</div>
+</div>
+
+  </div>
+<div id="block-bolt-content">
+  
+    
+      
+	<div class="section section-features">
+		<div class="container">
+			<h3 class="sr-only">
+				Features
+			</h3>
+			<ul class="row">
+				<li class="col-lg-3 col-md-6 col-sm-6 feature text-block text-block-icon">
+					<div class="bucket">
+						<h3 class="clearfix">
+							<span class="icon icon-feature icon-buildings pull-left"></span>
+							优质北美外教
+						</h3>
+						<p>
+							纯正的北美本土外教，高等教育背景，北美当地学校在职教师或具有ESL/LINC教学经验的教育机构老师，经过严格遴选、培训、考核和淘汰，组成了加舟英语无与伦比的教学团队。
+						</p>
+						
+					</div>
+				</li>
+				<li class="col-lg-3 col-md-6 col-sm-6 feature text-block text-block-icon">
+					<div class="bucket">
+						<h3 class="clearfix">
+							<span class="icon icon-feature icon-meter  pull-left"></span>
+							一对一的学习体验
+						</h3>
+						<p>
+							个性化定制的一对一教学课堂，让学员获得更高效的学习体验；固定的外教和时间，免去频繁约课的烦恼，更能在知己知彼的习惯中和老师成为朋友，在润物无声的交流中飞速提升。
+						</p>
+					</div>
+				</li>
+				<li class="col-lg-3 col-md-6 col-sm-6 feature text-block text-block-icon">
+					<div class="bucket">
+						<h3 class="clearfix">
+							<span class="icon icon-feature icon-life-saver pull-left"></span>
+							CCSS教学体系
+
+						</h3>
+						<p>
+							青少儿英语课程采用Wonders和Reach教材体系，是美国共同核心州立标准（Common Core State Standards）的主要教材，也是北美多达45个州的中小学采用最流行的教材体系，主题广泛，内容全面。
+						</p>
+					</div>
+				</li>
+				<li class="col-lg-3 col-md-6 col-sm-6 feature text-block text-block-icon">
+					<div class="bucket">
+						<h3 class="clearfix">
+							<span class="icon icon-feature icon-chart pull-left"></span>
+							严谨的课程设置
+						</h3>
+						<p>
+							课程设置完整、连续，知识点及学习方法由浅入深。学习过程中，不仅注重语言能力的提高，还强调对科学的认知以及创造力、批判思维的培养，英语语言、思维、应用能力如螺旋般提升。
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+
+
+<div class="section section-client-testimonials">
+		<h3 class="sr-only">
+			Testimonials
+		</h3>
+		<div class="section section-client-testimonial">
+			<div class="clearfix slider slider-testimonial">
+
+									<article class="slide" id="slide-munchery" >
+					<div class="column right pull-right">
+						<div class="photo-bg table table-logo">
+							<div class="table-cell table-cell-logo">
+								<span class="logo logo-feature logo-feature-munchery"></span>
+							</div>
+						</div>
+					</div>
+					<div class="column left pull-left">
+						<div class="blockquote table">
+							<blockquote class="table-cell" cite="/customers/munchery">
+								<span class="max-width">
+									<p>
+										我喜欢Rebecca老师，她人特别nice，超有耐心，总是笑。她的课程很轻松，我很开心。
+									</p>
+									<hr>
+									<cite>
+										<span class="cite-name">
+											Angelica
+										</span>
+										
+										<span class="cite-company sr-only">
+											- Munchery
+										</span>
+										<a href="#" class="btn btn-lg btn-round btn-outline btn-outline-default">
+											Learn More
+										</a>
+									</cite>
+								</span>
+							</blockquote>
+						</div>
+					</div>
+				</article>
+									<article class="slide" id="slide-hotel-tonight" >
+					<div class="column right pull-right">
+						<div class="photo-bg table table-logo">
+							<div class="table-cell table-cell-logo">
+								<span class="logo logo-feature logo-feature-hotel-tonight"></span>
+							</div>
+						</div>
+					</div>
+					<div class="column left pull-left">
+						<div class="blockquote table">
+							<blockquote class="table-cell" cite="/customers/hoteltonight">
+								<span class="max-width">
+									<p>
+										Hi I’m jerry. I’m 8 years old and have been in Brendon’s class for almost a year. I love this guy. He is super cool. In the class, we talk about everything that I’m interested in, like Minecraft and Star Wars. It’s a pity I can only have 3 classes with him a week.
+									</p>
+									<hr>
+									<cite>
+										<span class="cite-name">
+											Jerry
+										</span>
+										
+										<span class="cite-company sr-only">
+											- Hotel Tonight
+										</span>
+										<a href="#" class="btn btn-lg btn-round btn-outline btn-outline-default">
+											Learn More
+										</a>
+									</cite>
+								</span>
+							</blockquote>
+						</div>
+					</div>
+				</article>
+									
+									<article class="slide" id="slide-asana" >
+					<div class="column right pull-right">
+						<div class="photo-bg table table-logo">
+							<div class="table-cell table-cell-logo">
+								<span class="logo logo-feature logo-feature-asana"></span>
+							</div>
+						</div>
+					</div>
+					<div class="column left pull-left">
+						<div class="blockquote table">
+							<blockquote class="table-cell" cite="/customers/asana">
+								<span class="max-width">
+									<p>
+										我觉得好幸运找到了加舟英语。我简直是在第一次试听课的前5分钟就这样觉得了。我直接在试听课里和Joana老师安排好了后面的课程。很棒的体验，谢谢加舟英语。
+									</p>
+									<hr>
+									<cite>
+										<span class="cite-name">
+											Sisi
+										</span>
+										
+										<span class="cite-company sr-only">
+											- Asana
+										</span>
+										<a href="#" class="btn btn-lg btn-round btn-outline btn-outline-default">
+											Learn More
+										</a>
+									</cite>
+								</span>
+							</blockquote>
+						</div>
+					</div>
+				</article>
+				<!--					<article class="slide" id="slide-one-kings-lane">
+					<div class="column right pull-right">
+						<div class="photo-bg table table-logo">
+							<div class="table-cell table-cell-logo">
+								<span class="logo logo-feature logo-feature-one-kings-lane"></span>
+							</div>
+						</div>
+					</div>
+					<div class="column left pull-left">
+						<div class="blockquote table">
+							<blockquote class="table-cell" cite="/customers/one-kings-lane">
+								<span class="max-width">
+									<p>
+										Desk.com helps us treat every customer like royalty.
+									</p>
+									<hr>
+									<cite>
+										<span class="cite-name">
+											Alexis Chapman
+										</span>
+										<span class="cite-position">
+											Director - Customer Operations
+										</span>
+										<span class="cite-company sr-only">
+											- One Kings Lane
+										</span>
+										<a href="/customers/one-kings-lane" class="btn btn-lg btn-round btn-outline btn-outline-default">
+											Learn More
+										</a>
+									</cite>
+								</span>
+							</blockquote>
+						</div>
+					</div>
+				</article>
+									
+									<article class="slide" id="slide-luxe">
+					<div class="column right pull-right">
+						<div class="photo-bg table table-logo">
+							<div class="table-cell table-cell-logo">
+								<span class="logo logo-feature logo-feature-luxe"></span>
+							</div>
+						</div>
+					</div>
+					<div class="column left pull-left">
+						<div class="blockquote table">
+							<blockquote class="table-cell" cite="/customers/luxe">
+								<span class="max-width">
+									<p>
+										Our business helps busy people save time, so fast service with Desk.com is critical.
+									</p>
+									<hr>
+									<cite>
+										<span class="cite-name">
+											Eva Khoo
+										</span>
+										<span class="cite-position">
+											Senior Director of Operations
+										</span>
+										<span class="cite-company sr-only">
+											- Luxe
+										</span>
+										<a href="/customers/luxe" class="btn btn-lg btn-round btn-outline btn-outline-default">
+											Learn More
+										</a>
+									</cite>
+								</span>
+							</blockquote>
+						</div>
+					</div>
+				</article>
+				-->
+									
+				</div>
+			<div class="slider-active-arrow">
+				<div class="container"></div>
+			</div>
+		</div>
+		<div class="section section-client-list section-grey">
+			<div class="container">
+				<ul class="row slider slider-client-nav">
+					<li class="col-lg-6" id="munchery">
+						<span class="table table-logo">
+							<span class="table-cell table-cell-logo">
+								<span class="logo logo-slider logo-slider-munchery"></span>
+								<span class="sr-only">
+									Munchery
+								</span>
+							</span>
+						</span>
+					</li>
+					<li class="col-lg-6" id="client-hotel-tonight">
+						<span class="table table-logo">
+							<span class="table-cell table-cell-logo">
+								<span class="logo logo-slider logo-slider-hotel-tonight"></span>
+								<span class="sr-only">
+									Hotel Tonight
+								</span>
+							</span>
+						</span>
+					</li>
+					<li class="col-lg-6" id="client-asana">
+						<span class="table table-logo">
+							<span class="table-cell table-cell-logo">
+								<span class="logo logo-slider logo-slider-asana"></span>
+								<span class="sr-only">
+									Asana
+								</span>
+							</span>
+						</span>
+					</li>
+					<!--
+					<li class="col-lg-6" id="client-one-kings-lane">
+						<span class="table table-logo">
+							<span class="table-cell table-cell-logo">
+								<span class="logo logo-slider logo-slider-one-kings-lane"></span>
+								<span class="sr-only">
+									One Kings Lane
+								</span>
+							</span>
+						</span>
+					</li>
+					<li class="col-lg-6" id="client-luxe">
+						<span class="table table-logo">
+							<span class="table-cell table-cell-logo">
+								<span class="logo logo-slider logo-slider-luxe"></span>
+								<span class="sr-only">
+									Luxe
+								</span>
+							</span>
+						</span>
+					</li>
+					-->
+				</ul>
+			</div>
+		</div>
+	</div>
+  </div>
+
+
+<div class="views-element-container" id="block-homepage-ebooks">
+  
+    
+      <div><div class="js-view-dom-id-07f6a378c5e8be8527be5f64270f54a7968dd516bd4c588c9c9813e79ba53272">
+  
+  
+  
+
+  
+  
+  
+
+  
+<div class="section section-education">
+	<div class="container">
+		<header class="text-center">
+			<h2 class="page-header section-title">
+				what jiazhou provides.
+			</h2>
+			<p class="lead section-blurb">
+				Every student can learn. Just not on the same day or in the same way.
+			</p>
+		</header>
+		<ul class="row">
+						<li data-wow-delay="0s" class="wow animated simple_bounce col-lg-4 col-sm-4 col-xs-12 ebook stagger-1">
+				<div class="media">
+					<span class="pull-left media-object icon icon-ebook icon-ebook-green"></span>
+					<div class="media-body">
+						<h4 class="media-heading">
+							青少儿英语
+						</h4>
+						<p class="ebook__title">
+			面向5-16岁青少儿的英语在线教育课程，注重英语思维的引导和训练
+	</p>
+<p class="ebook__link">
+	<a
+		href="#"
+		class="read-more"
+		target="_blank"
+	>
+		Read More
+	</a>
+</p>
+					</div>
+				</div>
+			</li>
+						<li data-wow-delay=".1s" class="wow animated simple_bounce col-lg-4 col-sm-4 col-xs-12 ebook stagger-1">
+				<div class="media">
+					<span class="pull-left media-object icon icon-ebook icon-ebook-purple"></span>
+					<div class="media-body">
+						<h4 class="media-heading">
+							成人英语口语
+						</h4>
+						<p class="ebook__title">
+			提供雅思口语、商务英语、日常口语培训课程，量身定制培训内容
+	</p>
+<p class="ebook__link">
+	<a
+		href="http://help.desk.com/how-to-deliver-amazing-self-service-support"
+		class="read-more"
+		target="_blank"
+	>
+		Read More
+	</a>
+</p>
+					</div>
+				</div>
+			</li>
+						<li data-wow-delay=".2s" class="wow animated simple_bounce col-lg-4 col-sm-4 col-xs-12 ebook stagger-1">
+				<div class="media">
+					<span class="pull-left media-object icon icon-ebook icon-ebook-orange"></span>
+					<div class="media-body">
+						<h4 class="media-heading">
+							海外游学
+						</h4>
+						<p class="ebook__title">
+			联合北美当地学校及教育机构推出北美ESL夏令营、全真插班等项目
+	</p>
+<p class="ebook__link">
+	<a
+		href="http://help.desk.com/how-to-create-social-support-strategy"
+		class="read-more"
+		target="_blank"
+	>
+		Read More
+	</a>
+</p>
+					</div>
+				</div>
+			</li>
+					</ul>
+	</div>
+</div>
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+  </div>
+
+			</main>
+
+
+	
+	
+	
+
+
+	  <div>
+    <!-- =======================================
+
+	Mobile navigation
+
+======================================== -->
+
+<script id="tpl_primary_nav_mobile" type="text/x-handlebars-template">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<span class="menu-text sr-only">
+				Toggle menu
+			</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="/">
+					<img src="/assets/img/jiazhou-logo.png" alt="Desk.com" id="brand" width="200" height="72" />
+					</a>
+	</div>
+	<div class="sidr" id="sidr">
+		<nav role="navigation">
+			<ul class="nav">
+				<li class="link ">
+					<a href="#">
+						<span class="icon-wrap">
+							<span class="sl-icon" data-sl-icon=""></span>
+						</span>
+						<span class="link-title">
+							北美师资
+						</span>
+					</a>
+				</li>
+				<li class="link ">
+					<a href="#">
+						<span class="icon-wrap">
+							<span class="sl-icon" data-sl-icon=""></span>
+						</span>
+						<span class="link-title">
+							课程介绍
+						</span>
+					</a>
+				</li>
+				<li class="link ">
+					<a href="#">
+						<span class="icon-wrap">
+							<span class="sl-icon" data-sl-icon=""></span>
+						</span>
+						<span class="link-title">
+							游学服务
+						</span>
+					</a>
+				</li>
+				<li class="link ">
+					<a href="#">
+						<span class="icon-wrap">
+							<span class="sl-icon" data-sl-icon=""></span>
+						</span>
+						<span class="link-title">
+							关于加舟
+						</span>
+					</a>
+				</li>
+
+			</ul>
+		</nav>
+	</div>
+</script>
+  </div>
+
+
+		<!-- ========================================
+
+		Footer
+
+	========================================= -->
+
+	<footer role="contentinfo" id="primary-site-footer">
+		<div class="section section-blue-gray section-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+						<div class="row">
+							<div class="col-lg-3 col-sm-3 col-xs-12 link-group">
+								<a href="#">
+									<img src="/assets/img/jiazhou-logo.png" width="100%" height="100%" />
+								</a>
+							</div>
+							<div class="col-lg-2 col-sm-2 col-xs-12 link-group">
+								<a href="http://www.zoomvip.cn/">
+									<img src="http://www.zoomvip.cn/images/zoom.png" class="img-responsive center-block" />
+								</a>
+								<p class="text-center"> DownLoad Zoom</p>
+							</div>
+							<div class="col-lg-2 col-sm-2 col-xs-12 link-group">
+								<ul class="list-inline navbar-btn" id="social-links" style="margin:0 auto;display:table">
+									<li>
+										<a href="http://www.twitter.com/desk">
+											<span class="icon-circle icon-circle-twitter">
+												<i class="fa fa-twitter"></i>
+											</span>
+											<span class="text-center">
+												&nbsp;淘宝
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://www.facebook.com/desk">
+											<span class="icon-circle icon-circle-facebook">
+												<i class="fa fa-facebook"></i>
+											</span>
+											<span class="text-center">
+												&nbsp;微博
+											</span>
+										</a>
+									</li>
+								</ul>
+								
+							</div>
+							<div class="col-lg-3 col-sm-3 col-xs-12 link-group left-block">
+								
+								<a href="#">
+									<img src="/assets/img/erweima.png"  class="img-responsive center-block"/>
+								</a>
+								<span class="text-center"><p>微信扫一扫关注我们</p></span>
+							</div>
+							<div class="col-lg-2 col-sm-2 col-xs-12 link-group">
+								<span class="text-center" style="font-size:20px">
+									预约听课:<br/>
+									400-100-8888
+								</span>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</footer>
+
+
+<script src="/assets/js//js_-TdbR11JUx0KVGg_dvNTF70iNiE72TEVD_uIJ1Ndxgs.js"></script>
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ebda324fbb","applicationID":"24601551","transactionName":"YFdUYxRUCEUCWk0IXlkdd1QSXAlYTElYBlRoUVdUDlA=","queueTime":0,"applicationTime":28,"atts":"TBBXFVxOG0s=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
